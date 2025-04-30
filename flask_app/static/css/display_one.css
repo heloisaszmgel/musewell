@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* Reset default margins and paddings */
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff7f0;
+    color: #333;
+    padding: 0 20px;
+}
+
+/* Title header */
+.title {
+    text-align: center;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    padding: 30px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.title h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.title h3 {
+    font-size: 1.2rem;
+    color: #ffe9d6;
+    margin-top: 10px;
+}
+
+/* User info section */
+.userinfo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f57c00;
+    color: #ffffff;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.userinfo h2 {
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.userinfo button {
+    background-color: #ef6c00;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.userinfo button:hover {
+    background-color: #d85c00;
+    transform: scale(1.05);
+}
+
+.userinfo button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Note title */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #f57c00;
+    margin-top: 40px;
+}
+
+/* Note content */
+p {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #444444;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* Reusable button style (applied to both edit and delete) */
+.note-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+/* Delete-specific styling */
+.delete-button {
+    background-color: red;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/* Edit-specific styling */
+.edit-button {
+    background-color: #4aa5d4;
+}
+
+.edit-button:hover {
+    background-color: #3897c7;
+    transform: scale(1.05);
+}
+
+/* Container for both buttons */
+.note-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

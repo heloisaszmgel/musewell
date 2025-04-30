@@ -1,0 +1,122 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff7f0;
+    color: #333;
+}
+
+/* Header styles */
+.title {
+    text-align: center;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.title h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.title h3 {
+    font-size: 1.2rem;
+    color: #ffe9d6;
+    margin-top: 10px;
+}
+
+/* User info styles */
+.userinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f57c00;
+    color: #fff;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.userinfo a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.userinfo a:hover {
+    color: #ffe9d6;
+}
+
+.userinfo h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.userinfo button {
+    background-color: #ef6c00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.userinfo button:hover {
+    background-color: #d85c00;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #f6d365;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+table td {
+    color: #555555;
+}
+
+table a {
+    text-decoration: none;
+    color: #f57c00;
+    font-weight: 500;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Table row on hover */
+table tbody tr:hover {
+    background-color: #fff1e6;
+    transition: background-color 0.3s ease;
+}

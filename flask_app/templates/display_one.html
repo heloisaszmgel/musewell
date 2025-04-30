@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musewell</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/display_one.css') }}">
+</head>
+<!-- page that displays one note -->
+<body>
+    <div class="title">
+        <h1>Musewell</h1>
+        <h3>Your creative space to capture thoughts, dreams, and everyday magic ✨</h3> 
+    </div>
+    <div class="userinfo">
+        <h2> Welcome, {{ user.first_name }} </h2>
+        <button>
+            <a href="/dashboard">Dashboard</a>
+        </button>
+        <button>
+            <a href="/new/note">Click here to add a new note</a>
+        </button>
+        <button>
+            <a href="/logout">Logout</a>
+        </button>
+    </div>
+    <h2>{{ note.title }}</h2>
+    <p>{{ note.content }} </p>
+    <div class="note-actions">
+        <form action="/note/delete" method="POST">
+            <input type="hidden" name="id" value="{{ note.id }}">
+            <button type="submit" class="note-button delete-button" onclick="return confirm('Are you sure you want to delete this note?')">
+                Delete
+            </button>
+        </form>
+        <a href="/note/edit/{{ note.id }}" class="note-button edit-button">Edit</a>
+    </div>
+</form>
+</body>
+</html>

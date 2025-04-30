@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musewell</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new_note.css') }}">
+</head>
+<body>
+    <div class="title">
+        <h1>Musewell</h1>
+        <h3>Your creative space to capture thoughts, dreams, and everyday magic ✨</h3> 
+    </div>
+    <div class="userinfo">
+        <h2> Welcome, {{ user.first_name }} </h2>
+        <button>
+            <a href="/dashboard">Dashboard</a>
+        </button>
+        <button>
+            <a href="/logout">Logout</a>
+        </button>
+    </div>
+    <form method='POST' action= "/new/note">
+        <label for="title">Add a title to your note:</label>
+        <input type="text" id="title" name="title">
+        <label for="content">What are you thinking right now?</label>
+        <textarea id="content" name="content" rows="6"></textarea>
+        <button type="submit">Save your note</button>
+    </form>
+</body>
+</html>

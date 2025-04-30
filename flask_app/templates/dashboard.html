@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musewell</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <div class="title">
+        <h1>Musewell</h1>
+        <h3>Your creative space to capture thoughts, dreams, and everyday magic ✨</h3> 
+    </div>
+    <div class="userinfo">
+        <h2> Welcome, {{ user.first_name }} </h2>
+        <button>
+            <a href="/new/note">click here to add a new note</a>
+        </button>
+        <button>
+            <a href="/logout">Logout</a>
+        </button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- function get_all, variables should match  -->
+            {% for note in notes %} 
+            <tr>
+                <td>{{ note.title }}</td>
+            <td>
+                <!-- actions: view  / edit -->
+                <a href="/display_one/{{note.id}}"> View Note </a>
+            </td>
+            </tr>
+            {% endfor %}    
+        </tbody>
+    </table>
+</body>
+</html>

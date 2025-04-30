@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musewell</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit.css') }}">
+</head>
+<!-- page for editing  -->
+<body>
+    <div class="title">
+        <h1>Musewell</h1>
+        <h3>Your creative space to capture thoughts, dreams, and everyday magic ✨</h3> 
+    </div>
+    <div class="userinfo">
+        <h2> Welcome, {{ user.first_name }}</h2>
+        <button>
+            <a href="/dashboard">Dashboard</a>
+        </button>
+        <button>
+            <a href="/new/note">Click here to add a new note</a>
+        </button>
+        <button>
+            <a href="/logout">Logout</a>
+        </button>
+    </div>
+    <!-- route for AFTER hitting the submit -->
+    <form action="/note/update" method="POST"> 
+        <input type="hidden" name="id" value="{{ note.id }}">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ note.title }}">
+        <label for="content">Your note's content:</label>
+        <input type="text" id="content" name="content" value="{{ note.content }}">
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
